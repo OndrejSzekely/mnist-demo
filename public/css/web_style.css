@@ -1,0 +1,34 @@
+.button-style {
+    color: white;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.body-style {
+    color: #616161; /*grey darken-2*/
+}
+
+.prediction-label {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.prediction-record {
+    margin-top: 1rem;
+}
+
+.canvas-style {
+    margin-top: 3rem;
+    border: solid;
+    width: 80vmin;
+    height: 80vmin;
+}
+
+@media only screen and (min-width: 600px) {
+    .canvas-style {
+        margin-top: 3rem;
+        border: solid;
+        width: 50vmin;
+        height: 50vmin;
+    }
+}

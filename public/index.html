@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digit Recognition</title>
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <!-- Page CSS -->
+    <link href="css/web_style.css" rel="stylesheet">
+    <!-- Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <!-- Progressbar JS -->
+    <script src="lib/progressbar/progressbar.min.js"></script>
+    <!--  jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Page JS -->
+    <script type="text/javascript" src="js/page_functions.js"></script>
+    <script>
+        $(document).ready(function() {
+            prepareCanvas();
+            $('#progressBar').hide();
+        });
+    </script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body class="body-style">
+    <div class="container center-align">
+        <div class="row valign-wrapper">
+            <div class="col s6 m4">
+                <img src="images/ibm.png" width="60%">
+            </div>
+            <div class="col s6 offset-m4 m4">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 offset-m2 m8">
+                <canvas id="drawingCanvas" class="canvas-style"></canvas>
+                <canvas id="auxCanvas" style="display: none"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 offset-m2 m4">
+                <a id="clearCanvasButton" class="waves-effect waves-light blue darken-1 btn button-style" onclick="clearCanvas();"><i class="material-icons left">clear</i>clear Canvas</a>
+            </div>
+            <div class="col s6 m4">
+                <a id="sendButton" class="waves-effect waves-light blue darken-1 btn button-style" onclick="recognizeDigit();">recognize<i class="material-icons right">send</i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div id="progressBar" class="col s12 offset-m2 m8">
+                <div class="progress">
+                    <div class="indeterminate blue darken-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div id="results">
+        </div>
+    </div>
+</body>
+</html>
